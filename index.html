@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <title>Vme50, dad!</title>
+</head>
+
+<body>
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <a href="https://www.vme50.dad">
+              <img class="block h-8 w-auto lg:hidden" src="img/favicon.png" alt="Your Company">
+              <img class="hidden h-8 w-auto lg:block" src="img/favicon.png" alt="Your Company">
+            </a>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page">提交文案</a>
+              <a href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">KFC
+                GPT</a>
+              <a href="update.html"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">版本更新记录</a>
+              <a href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">dad
+                来个广告？</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button"
+            class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button"
+                class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full" src="img/tx.png" alt="">
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+          aria-current="page">提交文案</a>
+        <a href="#"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">KFC
+          GPT</a>
+        <a href="update.html"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">版本更新记录</a>
+      </div>
+    </div>
+  </nav>
+  <!--海报和公告-->
+  <header class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4" align="center">
+      <a href="https://www.vme50.dad"><h1 class="text-2xl font-bold">V我50 dad！</h1></a>
+      <span id="jilei_container_site_pv">😊本站总访问量<span id="jilei_value_site_pv"></span>次</span>
+      <span id="jilei_container_site_uv">🍟本站访客数<span id="jilei_value_site_uv"></span>人</span></p>
+      <p>&copy; 2023 <a href="https://www.vme50.dad" style="color: red;">Vme50 dad!</a>版权所有</p> 
+    </div>
+  </header>
+
+  <div class="container mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- 海报 -->
+      <div class="bg-gray-200 rounded-md p-4 col-span-1" align="center">
+        <h2 class="text-lg font-bold mb-2">扫码V我50，40也行，100更好</h2>
+        <img src="img/qr.jpg" alt="海报" class="mb-4">
+      </div>
+
+      <!-- 公告 -->
+      <div class="bg-gray-200 rounded-md p-4 col-span-1">
+        <h2 class="text-lg font-bold mb-2">公告🪧</h2>
+        <h3>
+          肯德基成立之始，系于西元一九五二年，其时，一位名唤哈兰·桑德斯之士，于美利坚合众国肯塔基州路易斯维尔市，创立一家小餐馆，以售卖炸鸡为业。初创之初，其餐馆之客众寡，然哈兰·桑德斯仍不屈不挠，始终坚持其所创之独特味道，以期吸引更多的食客前来品尝。
+        </h3>
+        <h3>时至今日，肯德基之名，已风靡全球，其所售之炸鸡不但美味可口，更以其独特之香味而著称。肯德基之成功，不仅系于其美食之口感，更源自于其创始人之不屈不挠精神，其故事，更是令人感叹不已。</h3>
+        <h3>今日之肯德基，已成为全球知名之连锁快餐品牌，其所传承之味道，更是历久弥新，成为众多食客心之所向。</h3>
+      </div>
+    </div>
+    <!--haibaohegg-->
+    <div class="container mx-auto px-4 py-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="masonry-container">
+        <!-- 文字展示块 -->
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            你发这些有什么目的？谁指使你的？你的动机是什么？你取得有关部门许可了吗？他们容许你发了吗？你背后是谁，发这些想做什么？你在讽刺谁？想颠覆什么？破坏什么？影射什么？回答不上来？那么跟我走一趟，顺便把你家户口本带上取证！所以今天疯狂星期四，谁请我吃？
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>我是高启强，昨晚安欣实在不忍，救下了我。警察已经封锁京海市，但我还活着，我还有翻盘的机会，我将卷土重来。在我逃亡的路上看到今天是肯德基疯狂星期四，希望你能v我50看我继续狂飙，逃出京海。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>你好，我是安欣，我已成功抓获高启强，但很不幸他越狱了。如果你愿意在这个消沉时期V 我50，请我吃一顿肯德基疯狂星期四，等我把他拷在栏杆上时，立刻把我的Burberry 风衣送给你，再额外赠送一件Loro Piana
+            飞行夹克。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>你好，我是《狂飙》导演，正在筹备《狂飙2》。但由于经费不足，拍摄进程一度被搁置，为了保证《狂飙2》能如期拍摄，请 v 我50参加今天的肯德基疯狂星期四活动，等事成之后，我将赠送你爱奇艺年费会员。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>你这以为又是疯狂星期四的文案，别逗了，不可能每周四都发 ，最近心情很差，觉得以前在网上发照片好像挺蠢，嘴上说着是想发才发
+            ，可是还是为了取悦别人，以前有多快乐，现在就有多难过，从人间烟火，到红着眼告别，消失在彼此的世界里，写到这里了，我有点饿了，想吃肯德基，反正今天是周四，不如v我50让我疯狂一下。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            14看着不香，果然还是13更香，iPhone14真是更新了个寂寞！你看了iPhone14发布会了吗？多少会有些失望，除了eSIM卡和卫星通讯两张无关痛痒的更新，其实纯粹就是数字变化，从13到14，采用了13相同的A15芯片，相同尺寸的屏幕，这也能叫全新一代的iPhone14手机？这难道不是妥妥的智商税？近期准备换新机的那些人，我不建议购买iPhone14啊，不如把钱拿来疯狂填饱肚子，今天肯德基疯狂星期四，谁请我吃？
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            我是吴邪，我现在在西藏，没有认识的熟人，身上还有几百亿的负债没还，如今我孤生一人只能住得起招待所吃得起泡面，身上的衣服也好久没换了，实在是穷的没钱了。前几日王盟给我发短信说铺子里进了点新货，有点便宜的首饰，都是50块左右。今天之内V我50吃顿饭就可以去铺子里领点小东西。真没骗人啊，真没骗人，我不知道什么星期四，V我50吃顿饭，下次盗墓带上你。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>今天就是“9月的第一杯奶茶”跟“疯狂星期四”的文案大战了。
+            我就纳闷了，到底肯德基给了多少钱，每个星期四都要在朋友圈问KFC疯狂星期四有无，还每个星期都编新的段子，我就不信肯德基有这么大的魔力，转我五十，我今天亲自去肯德基看看😊。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            世界上现在77亿人，有253亿只鸡，是人的数量的三倍。也就是说，如果鸡决定与人类开战，每个人平均要打三只鸡。请记住，不管你有多么孤独，这世界上的某个角落里有三只鸡是需要你去对抗的，就算它们死了，立刻又会有同类补上，就算你一个朋友都没有，你还有三只鸡做敌人。今天是肯德基疯狂星期四，V我50，我帮你去杀鸡。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>今天是疯狂星期四，转发KFC宣传到5个群，肯爷爷会根据你绑定的微信号，送给你一个全家桶，我试过了，是假的，但上班摸鱼闲着也是闲着，不如挨顿骂</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            “我有点想你，你呢？”前男友刚刚给我发来了这条消息，忽然间有些恍惚。好像我们还在一起，那三年里，我们一起放羊，一起喂猪，一起下地插秧。他亲手制作的那一大束大蒜花捧美如繁星。我难以忘记，我们分开的那一天，他发来的最后一条消息：今天肯德基疯狂星期四谁请我吃？
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            你好，我是奥特曼，我正在外星和敌人战斗！没有能量了！听说今天肯德基疯狂星期四，我现在需要有人给我带29.9块钱4个的吮指原味鸡补充能量。恢复后我请你来外星做客。睡了吗？我刚刚又突然惊醒了，起来哭了一个多小时，你懂那种感觉吗？
+            这个世界上所有人都欺负我歧视我，我也想好好爱这个世界，但是你们为什么都这样逼我！我最后再说一次，今天肯德基疯狂星期四，谁请我吃</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>我本是显赫世家的大少爷，却被诡计多端的奸人所害！家人弃我师门逐我甚至断我灵脉！重生一世，今天肯德基疯狂星期四!原味鸡29.9 4块 家人们v我30，我要吃1份助我重塑灵脉，待我重回巅峰，许你一方小世界</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>楼下好像出事了！！刚刚我听见楼下那个女的哭的竭斯底里 不知道发生了什么事 家里边又摔又砸 小孩的哭声也是听得人揪心 于是我靠近窗户侧耳倾听 只听见女生大声的说：今天是疯狂星期四 谁来请我吃</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>你好，我是白敬亭，我还在拍戏，现在给我转49.9。待我今天的疯狂星期四购买肯德基吮指原味鸡补充体力后， 下部戏我吻你</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>救命！我刚刚被蜈蚣咬了！ 听说蜈蚣的天敌是鸡 谁请我吃肯德基救我一命！</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>今天上班的时候，领导拿了一份文件要求我复印。我用复印机复印了没几张，机器提示电量不足。我现在很紧张，距离领导要求的时间不到一小时了，谁v我50吃一顿肯德基疯狂星期四，我将用热量为复印机持续赋能</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>如果上班困了喝咖啡不管用，吃根辣条就精神了；如果吃辣条没用，就去厕所自己打一套王八拳，打完就精神了；如果以上两种方法都没有用，就给我转账29.9，让我吃个疯狂星期四的肯德基蛋挞，损失29.9应该能让你彻底精神。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            今天，是我人生中最黑暗，最emo的时候，但是我很难把朋友当成垃圾桶或者树洞去倾诉，更喜欢憋着自己消化，睡一觉第二天醒来就好了，不想连累别人不想把负面情绪传递给身边的朋友。但是，我更希望朋友能够给予我物质层面的帮助，今天是肯德基疯狂星期四，你愿意请我吃肯德基吗？
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            今天、我人生の中で最黑暗、最黑暗の时刻ですが、わたし倒垃圾や树洞のような朋友も不在、自己自身を消化すること挺好、天亮まで睡って目を醒ます、疲れた别の人にも不想疲れ、周围の朋友に否定的な感情を影响たくない。但かし、我は我の朋友が我に物质的な给我ほしい、今天は肯德基疯狂星期四です、来几个たまで朋友は肯德基を吃べるため请我したいです。v我50。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            世界上现在77亿人，有253亿只(养殖的)鸡，是人的数量的三倍。也就是说，每个人平均可以得到三只鸡。请记住，不管你有多么孤独，这世界上的某个角落里有三只鸡是为你而生的，就算它们死了，立刻又会有同类补上，就算你一个朋友都没有，你还有三只鸡。今天是肯德基疯狂星期四
+            V我25，我帮你去谢谢鸡。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            为了提升自己的文化素养报了个书法培训班本来也没什么但小学生的恶意真的超乎我的想象他们说我老太婆半只脚进棺材还来学书法我听到都气哭了我擦干眼泪不管他们继续练字我发誓我一定要练出一手好字不能让钱白花我凝神静气在纸上认真的写出一行字：今天是肯德基疯狂星期四
+            谁能请我吃？</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>刚给对象洗完衣服，手搓的，平时洗之前手都要消5遍毒。今天因为漏了一遍被对象打了两巴掌，现在心里有点委屈。今天疯狂星期四，谁请我吃KFC，我边吃边跟你说他平时都怎么骂我的。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>肯德基给你们多少钱了，让你们周周给编段子，疯狂星期四真的那么有诱惑力？我偏不信，转我50，我去试试</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            离婚这么多年了，竟然在群里遇到你了，你过得挺好我也就放心了。孩子上四年级了，成绩一直都很好，连续三年拿班上第一名，就是性格像你，每次生气就逃避，孩子总问爸爸什么时候来参加家长会！有时间就来看看孩子吧，多陪陪孩子，孩子今天想吃肯德基，因为今天是肯德基疯狂星期四，v我80，我请孩子吃。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>解：取CD中点E，连接AE
+
+            ∵∠BAC=0.2，E为CD中点
+
+            ∴AE＝BE＝CE
+
+            ∴∠EAC＝∠C
+
+            ∴∠AEB＝∠EAC+∠C＝2∠C
+
+            ∵AB＝DC/2
+
+            ∴AB＝AE
+
+            ∴∠B＝∠AEB
+
+            ∴∠B＝2∠C
+
+            ∴∠BAE＝180-∠B-∠AEB＝180-4∠C
+
+            ∴∠BAC＝∠BAE+∠EAC＝180-4∠C+∠C＝180-3∠C
+
+            ∵∠C＝20
+
+            ∴∠KFC＝V50</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            假如你是李华，你的英国笔友Peter给你写了一封信，向你询问你周四的安排，请你写一封回信。写作要点:1.你要去肯德基参加"疯狂星期四"活动。2.向他介绍"疯狂星期四"的活动。3.要求他V你50。注意事项:1.行文流畅，包含所有要点，无语法错误，可适当自由发挥,80词左右2.不出现真实的人名地名。3.请将Peter的50
+            V给我，否则不给分。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>求姻缘应该去哪个寺庙？
+
+            A、灵隐寺
+
+            B、弘法寺
+
+            C、甘露寺
+
+            D、肯德基疯狂星期寺</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>暗恋的人朋友圈突然官宣了 哭累了 突然不想活了 听说炸鸡跟酸奶一起吃会中毒 酸奶我有了 有没有朋友给我点炸鸡 听说肯德基的炸鸡毒性最强</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>Bro 别他妈垂头丧气了，知道今天是什么日子吗?今天是肯德基fK crazy Thursday!香辣热骨鸡20块钱15个 Bro v/zfb我40，我他妈要吃30个！</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>第一次逛肯德基，并没有特别的感觉，因为独属于我的特惠套餐，我早已遇见，星期四见到你时，我的齿轮开始转动，无法停下要吃到什么的预感，虽说已经经历很多次了，让我们再多点一次餐吧，噢，can you V me 50
+            yuan？忘れたくないこと…噢噢噢oh喔噢呕呕呕oh噢喔～忘れたくないこと～～～～</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>从决定喜欢你的那刻开始我就知道我疯了 什么样子我都觉得最好 你说任何话做任何事我都觉得是对的 因为我喜欢你呀 所以就算你对我冷言冷语爱理不理 我还觉得你就是个性迷人有脾气的光芒万丈小可爱 我大概是没救了
+            你不知道你回信息特别慢的时候我都不想说话 该说的我都说了 就剩最后一句：刚想起来七夕这天原来是肯德基疯狂星期四 所以请我肯德基吗</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>还是分手了
+            ，谢谢大家。今天是2022年9月8日，我们最终和平分手，其实从朋友到恋人我们发生了挺多事情，能走到一起也是很不容易。我喜欢你，很喜欢你，也想和你幼稚。对啊，我总问我自己为什么还能坚持，可能没有答案，我没有备胎，也不玩暧昧，我所有的脾气爱笑爱哭都给了你，我能为你做的最后一件事竟然是走出你的人生。我一点都不后悔，更谢谢你教会我成长。
+            我也不知道这是谁写的，挺感动的我就复制下来了，看到这里说明你很在乎我，天气很热能请我喝冰可乐吗，如果可以我想喝两瓶。如果不可以，今天肯德基疯狂星期四，我想吃八个蛋挞</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>穿过挪威的森林，让我走进你的梦里，夕阳落在我的铠甲，王子不一定骑白马，现在是上午十一点二十七，你不必故作冷淡，我也不想做最后的纠缠。最后说一句，KFC疯狂星期四VME50</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            你好，我是高中生侦探工藤新一，我刚在游乐场被打晕，被黑衣组织强迫灌下了APTX-4869，现在身体竟然变成了小孩子，目前我吃了灰原哀开发的解药试作品JUFD-866、TAMA-028、STAR-907、VGD-193、PX-177、IPX-192、SSNI-290都起不到作用，现在听说肯德基疯狂星期四29.9元的吮指原味鸡有特殊作用，希望大家能够帮我一忙，事成后我让怪盗基德给你搞几个宝石。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            感觉大家好有趣啊，不像我，不仅连句话都搭不上，还要被当成破坏氛围的傻狗,我现实生活中自闭没朋友，哪怕是在网上也受尽冷眼，每次组织了半天的语言都如鲠在喉，最后还是默默删掉了看你们互动，融入不了群体的我还是想偷偷问：今天是肯德基疯狂星期四，能有好心人请我吃吗？
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>大家好 我是秦始皇 其实我并没有死 我在西安有100000吨黄金 今天肯德基疯狂星期四 我现在需要有人来请我吃29.9块钱8只蛋挞 我明天直接带部队复活 让你统领三军!</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>我的嘴真笨，总能把天聊死了，跟你找话题好难，何况我这么喜欢你，连发个表情包都要挑拣半天呢，我最近又开始期待夜晚了，每一句轻飘飘的晚安都是我难以启齿的心事，你听得见吗
+            其实我在说我今天也很喜欢你，所以你能请我吃肯德基疯狂星期四吗，我想干爆3个老北京鸡肉卷</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>你过得挺好我也就放心了 孩子上四年级了 成绩一直都很好 连续三年班上拿第一名 就是性格像你一出事就逃避 孩子总问爸爸什么时候来参加家长会 有时间就来看看孩子
+            多陪陪孩子，孩子今天想吃肯德基了，转19.9让你的孩子吃上疯狂星期四</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>我承认你有几分姿色，如果我三十岁会离了婚娶你，如果我二十几岁会分了手爱你，如果我十几岁会奋不顾身的找你，可是我才有七岁，这次肯德基疯狂星期四，可以请我吃吗？</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>家人们听说了吗，最近KFC和vivo合作出了一款手机，叫肯德基疯狂星期四vivo50</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            我想大抵是星期四到了，横竖坐不住，摊开聊天列表一看，歪歪扭扭每个人都发着V我50。我不明白人们为何如此待人，我看不惯，也不愿去看，大抵是他人也很难接济罢。今日的事不必再提，皆因钱财不够，我大抵是得给群友写一封文书。之所以说是文书，因为若是叫做借钱，未免由有种低三下四的味道，我当不必如此。人非圣贤，我不过是贪食肯德基疯狂星期四罢。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            有没有人和我一样很讨厌疯狂星期四的文案尤其是朋友一发就是发一堆,后面还有人跟着发哈哈哈哈,我不知道笑点在哪里,但是我又不好意思叫他们不要发,然后我就想到了一个办法,V我50今天肯德基疯狂星期四,我边吃边告诉你这个办法是什么
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            男朋友跟我分手了，我心碎了，决定见他一面把事情说清楚，如果他非要分手我也无话可说。我买了去北京的机票，坐了两个小时的飞机，到了之后却因为疫情被封小区了他出不来。我心如死灰在大街上游荡，打开手机看到了我们的恩爱时光泪流满面，忽然注意到手机上显示的时间：今天肯德基疯狂星期四，谁请我吃安慰一下我。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>我亲戚有个女儿今年都19了，她父母突然告诉她是领养的 然后她问她父母为什么现在说后来她爸妈说，原来是因为她哥，她哥哥28了还没女朋友 也没啥好工作
+            她爸妈很着急，就跟那个妹妹说现在没办法，如果她哥哥真的30都找不到对象的话，就不如让她嫁给她哥哥 她家里人还说这样的话只有利没有弊，至少哥哥知根知底，以后也不用赡养多的老人，反正从小一起长大也没有婆媳关系
+            她爸妈还说反正以后相亲也不见得能遇到自己真爱，说不定还没有哥哥靠谱，就一直在说服这个妹妹。这个女的已经绝食两天了 今天疯狂星期四，你们微我50，我带她去吃肯德基</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>每个星期四都有人在嚎:肯德基疯狂星期四v我50真无语，刷几条说说就有这种文案，差不多得了真不知道肯德基有什么好吃的，v我50我去尝尝</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>科技公司那就这个： 早上辛苦写了一早上java突然报错了，找不到原因，谁帮我看看java.lang.NoMoneyException: KFC Crazy Thursday whoever gives me
+            $50, I will thank him.</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            我叫程少商，从小阿父阿母在外打仗是个没人管的小女娘，之前我遇见了一个叫做楼垚的世家子弟与他结缔良缘外放过上幸福的生活，可谁知楼垚前任何昭君全家战死，遗言要娶前任！要我做平妻！我恨！我怨！我怒！凌不疑在我落难之时，为我指明方向，他说：今天是肯德基疯狂星期四，V我50夜宵我要一边吃肯德基劲爆鸡米花一边讨论我的复仇计划。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>吾往疯四久矣，速五十于微信。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>我有个朋友去Steam上班了，他跟我说内部员工不需要花钱买游戏，只需要输入员工内部序列号就可以玩正版游戏
+            KFC-CRAZY-THURSDAY-VME100
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>有人是讨好型人格 而我是讨饭型人格 想知道什么是讨饭型人格吗?今天疯狂星期四v我50告诉你</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>
+            演的怎么了？人生如戏，不能演吗？真搞不懂为什么有些人总是天天在下面怀疑别人演不演的，爱看不看不看拉倒！就是演的也比你们强，整天看到你们在这里怀疑这个怀疑那个真的气的我眼泪在眼眶打转，手攥紧了衣角整个人都在颤抖，太让我失望了更多的是心寒。我需要有好心人请我吃疯狂星期四，希望大家支持。
+          </p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>在线接稿：1.头像10元2.线稿立绘25元3.草稿头像5元4.精细半身40元5.摸鱼 35元6.KFC代吃50元目前只接6，因为别的不会</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>我是运营阿灵，今天是肯德基疯狂星期四 黄金小酥肉才九块九，v我50，不然我就从这里跳下去。我求你了姐别不给我，我保证最后一次。热辣香骨鸡！小酥肉！黄金鸡块！蛋挞！肯德基！！没有你我可怎么活啊</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>黄桃罐头保质期是15个月，可乐要在打开后24小时喝掉，吻痕大概一周就能消失。两个人在一起三个月才算过了磨合期，似乎一切都有期限。 这样多无趣，我还是喜欢一切没有规律可循的事情。
+            比方说现在，你突然v我50，让我去买肯德基疯狂星期四。</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>我都懂 我都明白 我是选项E 我是planB 是分叉的头发 洗衣机流出的泡沫 超市里被捏碎的饼干 是吃腻的奶油 是落寞的城市 是地上的草 我是被踩踏的 是西装的备用扣 是被雨淋湿的小狗 是腐烂的橘子 是过期的牛奶
+            是断线的风筝 是被随意丢弃的向日葵 是沉默寡言的小朋友 所以能v我19.99吗肯德基疯狂星期四</p>
+        </div>
+
+        <div class="bg-opacity-50 bg-gray-500 rounded-md p-4 text-white cursor-pointer masonry-item">
+          <p>加你vx的那天起，我就关注你了，不善言辞的我，不敢和你聊天，怕打扰你，但是，我很确信这是喜欢，这条朋友圈我设置了仅你可见，我想和你一起过中秋，你要同意你就拍一拍我，再转我50，请我吃肯德基疯狂星期四</p>
+        </div>
+
+
+        <!-- 更多文本展示块... -->
+
+      </div>
+    </div>
+
+    <script async src="https://cdn.ly522.com/js/jilei.pure.mini.js"></script>
+    <script src="https://cdn.jsdelivr.net/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

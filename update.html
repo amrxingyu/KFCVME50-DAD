@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <title>Vme50, dad!|版本更新记录</title>
+</head>
+
+<body>
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="https://www.vme50.dad">
+                            <img class="block h-8 w-auto lg:hidden" src="img/favicon.png" alt="Your Company">
+                            <img class="hidden h-8 w-auto lg:block" src="img/favicon.png" alt="Your Company">
+                          </a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                aria-current="page">提交文案</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">KFC
+                                GPT</a>
+                            <a href="update.html"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">版本更新记录</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">dad
+                                来个广告？</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <button type="button"
+                        class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <span class="sr-only">View notifications</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                        </svg>
+                    </button>
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+                            <button type="button"
+                                class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="h-8 w-8 rounded-full" src="img/tx.png" alt="">
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                    aria-current="page">提交文案</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">KFC
+                    GPT</a>
+                <a href="update.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">版本更新记录</a>
+            </div>
+        </div>
+    </nav>
+    <!--海报和公告-->
+    <header class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4" align="center">
+            <a href="https://www.vme50.dad">
+                <h1 class="text-2xl font-bold">V我50 dad！</h1>
+            </a>
+            <span id="jilei_container_site_pv">😊本站总访问量<span id="jilei_value_site_pv"></span>次</span>
+            <span id="jilei_container_site_uv">🍟本站访客数<span id="jilei_value_site_uv"></span>人</span></p>
+            <p>&copy; 2023 <a href="https://www.vme50.dad" style="color: red;">Vme50 dad!</a>版权所有</p>
+
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- 海报 -->
+            <div class="bg-gray-200 rounded-md p-4 col-span-1" align="center">
+                <h2 class="text-lg font-bold mb-2">扫码V我50，40也行，100更好</h2>
+                <img src="img/qr.jpg" alt="海报" class="mb-4">
+            </div>
+
+            <!-- 公告 -->
+            <div class="bg-gray-200 rounded-md p-4 col-span-1">
+                <h2 class="text-lg font-bold mb-2">公告🪧</h2>
+                <h3>肯德基成立之始，系于西元一九五二年，其时，一位名唤哈兰·桑德斯之士，于美利坚合众国肯塔基州路易斯维尔市，创立一家小餐馆，以售卖炸鸡为业。初创之初，其餐馆之客众寡，然哈兰·桑德斯仍不屈不挠，始终坚持其所创之独特味道，以期吸引更多的食客前来品尝。
+                </h3>
+                <h3>时至今日，肯德基之名，已风靡全球，其所售之炸鸡不但美味可口，更以其独特之香味而著称。肯德基之成功，不仅系于其美食之口感，更源自于其创始人之不屈不挠精神，其故事，更是令人感叹不已。</h3>
+                <h3>今日之肯德基，已成为全球知名之连锁快餐品牌，其所传承之味道，更是历久弥新，成为众多食客心之所向。</h3>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 py-8">
+            <h2 class="text-lg font-bold mb-4 mt-8">vme50.dad后续更新计划</h2>
+            <ul class="list-disc ml-8">
+                <li>用户自助提交文案</li>
+                <li>评论功能</li>
+                <li>已V🤤记录</li>
+                <li>SEO优化</li>
+            </ul>
+        </div>
+
+        <div class="container mx-auto px-4 py-8">
+            <h2 class="text-lg font-bold mb-4 mt-8">v0.5.0 - 2023年4月20日</h2>
+            <ul class="list-disc ml-8">
+                <li>完成界面的初步设计</li>
+                <li>前端文案展示，点击复制</li>
+                <li>完成内容的初步填充</li>
+                <hr>
+                <hr>
+            </ul>
+        </div>
+    </div>
+
+    <script async src="https://cdn.ly522.com/js/jilei.pure.mini.js"></script>
+    <script src="https://cdn.jsdelivr.net/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
